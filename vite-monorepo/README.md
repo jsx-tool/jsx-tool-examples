@@ -239,25 +239,6 @@ packages/app/.jsxtool/rules.md
 
 This is optional - the Vite plugin works without it.
 
-## Tech Stack
-
-- **React Router 7.9.2** - Modern routing for React
-- **Vite 7.1.7** - Fast build tool and dev server
-- **React 19**
-- **TypeScript 5.9.2**
-- **Tailwind CSS 4**
-- **npm workspaces** for monorepo management
-- **JSX Tool** with Vite plugin
-
-## Comparison: Vite vs Next.js Monorepo
-
-| Feature | Vite Plugin | Next.js Manual |
-|---------|-------------|----------------|
-| Setup complexity | ✅ Simplest | More steps |
-| Script injection | ✅ Automatic | Manual in layout |
-| Additional directories | Plugin option | Config file |
-| Configuration file | vite.config.ts | .jsxtool/config.json |
-
 ## Learn More
 
 - [JSX Tool Documentation](https://github.com/jsx-tool/jsx-tool)

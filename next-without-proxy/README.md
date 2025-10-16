@@ -110,14 +110,6 @@ Simply visit `http://localhost:3002` - no proxy needed!
 | Port management | Direct access | Requires proxy port |
 | Recommended | ✅ Yes | Only if manual won't work |
 
-## Tech Stack
-
-- **Next.js 15.5.5** with Turbopack
-- **React 19**
-- **TypeScript**
-- **Tailwind CSS 4**
-- **JSX Tool** for React component development assistance
-
 ## Project Structure
 
 ```

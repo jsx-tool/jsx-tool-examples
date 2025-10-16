@@ -68,14 +68,6 @@ The proxy intercepts requests to port 3001 and injects JSX Tool functionality.
 
 **We strongly recommend using manual installation instead of proxying when possible.** Manual installation gives you more control and avoids redirect issues. See the `next-without-proxy` example for the recommended approach.
 
-## Tech Stack
-
-- **Next.js 15.5.5** with Turbopack
-- **React 19**
-- **TypeScript**
-- **Tailwind CSS 4**
-- **JSX Tool** for React component development assistance
-
 ## Project Structure
 ```
 next-with-proxy/

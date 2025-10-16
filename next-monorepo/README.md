@@ -240,15 +240,6 @@ To give JSX Tool access to additional packages, just add them to `additionalDire
 
 All paths are relative to `packages/app/` where the config lives.
 
-## Tech Stack
-
-- **Next.js 15.5.5** with Turbopack
-- **React 19**
-- **TypeScript 5.9.2**
-- **Tailwind CSS 4**
-- **npm workspaces** for monorepo management
-- **JSX Tool** with multi-directory support
-
 ## Learn More
 
 - [JSX Tool Documentation](https://github.com/jsx-tool/jsx-tool)

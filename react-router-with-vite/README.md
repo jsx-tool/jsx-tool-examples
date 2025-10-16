@@ -72,24 +72,6 @@ Visit `http://localhost:5173` (or whatever port Vite assigns)
 
 ✅ **Works out of the box** - No ports to configure, no scripts to add
 
-## Comparison with Other Setups
-
-| Feature | Vite Plugin | Next.js Manual | Next.js Proxy |
-|---------|-------------|----------------|---------------|
-| Setup complexity | ✅ Simplest | Moderate | Simple |
-| Configuration needed | One line | Script injection | Proxy config |
-| Port management | ✅ Automatic | Manual | Manual |
-| Framework support | Vite-based | Next.js only | Next.js only |
-
-## Tech Stack
-
-- **React Router 7.9.2** - Modern routing for React
-- **Vite 7.1.7** - Fast build tool and dev server
-- **React 19** - Latest React version
-- **TypeScript 5.9.2** - Type safety
-- **Tailwind CSS 4** - Utility-first CSS
-- **JSX Tool** - React component development assistance
-
 ## Project Structure
 
 ```
