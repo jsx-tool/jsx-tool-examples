@@ -1,0 +1,16 @@
+{
+  "name": "next-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev:jsx-tool --workspace=app",
+    "build": "npm run build --workspace=app",
+    "start": "npm run start --workspace=app",
+    "lint": "npm run lint --workspace=app"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "vite-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=app",
+    "build": "npm run build --workspace=app",
+    "start": "npm run start --workspace=app"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
