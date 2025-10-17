@@ -100,7 +100,7 @@ packages/app/          (your .jsxtool/config.json is here)
     "start": "next start"
   },
   "dependencies": {
-    "@jsx-tool/jsx-tool": "^0.0.10",
+    "@jsx-tool/jsx-tool": "^0.0.12",
     "next": "15.5.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",

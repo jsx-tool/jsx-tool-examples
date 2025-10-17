@@ -107,7 +107,7 @@ If your `vite.config.ts` is not in the same directory as `package.json`, the rel
     "start": "react-router-serve ./build/server/index.js"
   },
   "dependencies": {
-    "@jsx-tool/jsx-tool": "^0.0.10",
+    "@jsx-tool/jsx-tool": "^0.0.12",
     "@react-router/node": "^7.9.2",
     "@react-router/serve": "^7.9.2",
     "isbot": "^5.1.31",
