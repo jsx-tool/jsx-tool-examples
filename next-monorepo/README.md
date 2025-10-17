@@ -94,7 +94,7 @@ packages/app/          (your .jsxtool/config.json is here)
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack --port 3001",
-    "jsx-tool": "node ../../node_modules/@jsx-tool/jsx-tool/bin/jsx-tool.js",
+    "jsx-tool": "jsx-tool",
     "dev:jsx-tool": "npm run jsx-tool & npm run dev",
     "build": "next build --turbopack",
     "start": "next start"

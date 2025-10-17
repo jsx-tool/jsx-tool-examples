@@ -28,7 +28,7 @@ export default function RootLayout({
         {process.env.NODE_ENV === 'development' && (
           <script
             dangerouslySetInnerHTML={{
-              __html: `window.__JSX_TOOL_DEV_SERVER_WS_URL__ = 'ws://0.0.0.0:12022';`,
+              __html: `window.__JSX_TOOL_DEV_SERVER_WS_URL__ = 'ws://localhost:12022';`,
             }}
           />
         )}
