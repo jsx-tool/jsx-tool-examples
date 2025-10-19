@@ -10,7 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@jsx-tool/jsx-tool": "^0.0.12",
+    "@jsx-tool/jsx-tool": "^0.0.13",
     "next": "15.5.5",
     "react": "19.1.0",
     "react-dom": "19.1.0"
