@@ -1,6 +1,6 @@
 # Vite Monorepo with JSX Tool
 
-This example demonstrates how to use JSX Tool in a Vite/React Router monorepo setup with shared packages. The Vite plugin makes this incredibly simple - just pass `additionalDirectories` to access multiple packages.
+This example demonstrates how to use JSX Tool in a Vite/React Router monorepo setup with shared packages. The Vite plugin makes this really easy: just pass `additionalDirectories` to access multiple packages.
 
 ## Monorepo Structure
 
@@ -107,7 +107,7 @@ If your `vite.config.ts` is not in the same directory as `package.json`, the rel
     "start": "react-router-serve ./build/server/index.js"
   },
   "dependencies": {
-    "@jsx-tool/jsx-tool": "^0.0.13",
+    "@jsx-tool/jsx-tool": "^0.0.25",
     "@react-router/node": "^7.9.2",
     "@react-router/serve": "^7.9.2",
     "isbot": "^5.1.31",
@@ -241,7 +241,6 @@ This is optional - the Vite plugin works without it.
 
 ## Learn More
 
-- [JSX Tool Documentation](https://github.com/jsx-tool/jsx-tool)
+- [JSX Tool Documentation](https://jsx-tool/docs)
 - [React Router Documentation](https://reactrouter.com)
 - [Vite Documentation](https://vite.dev)
-- [Next.js Monorepo Example](../next-monorepo)

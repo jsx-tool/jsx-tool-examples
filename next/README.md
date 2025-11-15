@@ -1,14 +1,33 @@
 # Next.js with JSX Tool (Manual Installation - Recommended)
 
-This is a starter project with JSX Tool and Next.js using the **manual installation**. This is the **recommended approach**. Acess the app with JSX Tool pre-installed on **localhost:3000**
+This is an example project with JSX Tool and Next.js using the **manual installation**. This is the **recommended approach**. Acess the app with JSX Tool pre-installed on **localhost:3000**
+
+## Getting Started
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start the Development Server with JSX Tool
+
+```bash
+npm run dev:jsx-tool
+```
+
+This command:
+1. Starts the JSX Tool WebSocket server on port 12021
+2. Starts your application on port 3000
+3. Starts dev server on port 4000
 
 ## How It Works
 
-Instead of using a proxy server, JSX Tool scripts are directly injected into your Next.js application during development. This approach:
+JSX Tool scripts are directly injected into your Next.js application during development. This approach:
 
-- **Next.js runs on port 3001**
-- **Proxy server runs on port 3000**
-- **WebSocket runs on port 12022** - For file-system communication
+- **Next.js runs on port 3000**
+- **Proxy server runs on port 4000**
+- **WebSocket runs on port 12021** - For file-system communication
 - **Scripts injected via `<head>`** - Manual injection in `layout.tsx`
 
 The JSX Tool WebSocket URL is set via a global window variable that's only included in development mode.
@@ -19,11 +38,11 @@ See `.jsxtool/config.json` for the configuration:
 
 ```json
 {
-  "serverPort": 3001,
+  "serverPort": 3000,
   "serverHost": "localhost",
   "serverProtocol": "http",
   "noProxy": false,
-  "proxyPort": 3000,
+  "proxyPort": 4000,
   "proxyHost": "localhost",
   "proxyProtocol": "http",
   "wsPort": 12021,
@@ -52,7 +71,7 @@ export default function RootLayout({
         {process.env.NODE_ENV === 'development' && (
           <script
             dangerouslySetInnerHTML={{
-              __html: `window.__JSX_TOOL_DEV_SERVER_WS_URL__ = 'ws://0.0.0.0:12022';`,
+              __html: `window.__JSX_TOOL_DEV_SERVER_WS_URL__ = 'ws://0.0.0.0:12021';`,
             }}
           />
         )}
@@ -68,26 +87,7 @@ export default function RootLayout({
 This script:
 - Only runs in development mode
 - Sets the WebSocket URL for JSX Tool to connect to your file system
-- Uses port 12022 (matching the `wsPort` in config.json)
-
-## Getting Started
-
-### Install Dependencies
-
-```bash
-npm install
-```
-
-### Start the Development Server with JSX Tool
-
-```bash
-npm run dev
-```
-
-This command:
-1. Starts the JSX Tool WebSocket server on port 12022
-2. Starts your application on port 3001
-3. Starts Next.js dev server on port 3000
+- Uses port 12021 (matching the `wsPort` in config.json)
 
 ### Access Your Application
 
@@ -111,5 +111,5 @@ next-without-proxy/
 
 ## Learn More
 
-- [JSX Tool Documentation](https://github.com/jsx-tool/jsx-tool)
+- [JSX Tool Documentation](https://jsx-tool.com/docs)
 - [Next.js Documentation](https://nextjs.org/docs)
