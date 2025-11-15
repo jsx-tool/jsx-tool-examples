@@ -1,0 +1,8 @@
+{
+  "noProxy": true,
+  "wsPort": 12021,
+  "wsHost": "localhost",
+  "wsProtocol": "ws",
+  "injectAt": "</head>",
+  "additionalDirectories": ["../shared"]
+}

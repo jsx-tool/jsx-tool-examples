@@ -1,7 +1,0 @@
-{
-  "noProxy": true,
-  "wsPort": 12022,
-  "wsHost": "localhost",
-  "wsProtocol": "ws",
-  "logging": false
-}

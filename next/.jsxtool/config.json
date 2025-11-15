@@ -1,0 +1,13 @@
+{
+  "serverPort": 3000,
+  "serverHost": "localhost",
+  "serverProtocol": "http",
+  "noProxy": false,
+  "proxyPort": 3500,
+  "proxyHost": "localhost",
+  "proxyProtocol": "http",
+  "wsPort": 12021,
+  "wsHost": "localhost",
+  "wsProtocol": "ws",
+  "injectAt": "</head>"
+}
