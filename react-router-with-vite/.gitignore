@@ -1,7 +1,16 @@
-.DS_Store
-.env
-/node_modules/
+# Dependencies
+node_modules/
 
-# React Router
-/.react-router/
-/build/
+# Build outputs
+.react-router/
+dist/
+build/
+.vite/
+
+# OS files
+.DS_Store
+
+# Environment files
+.env
+.env.local
+.env.*.local
