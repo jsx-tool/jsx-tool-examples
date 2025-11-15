@@ -1,12 +1,13 @@
 # Next.js with JSX Tool (Manual Installation - Recommended)
 
-This example demonstrates how to use JSX Tool with Next.js using **manual installation**. This is the **recommended approach** as it avoids the redirect and routing issues that can occur with the proxy setup.
+This is a starter project with JSX Tool and Next.js using the **manual installation**. This is the **recommended approach**. Acess the app with JSX Tool pre-installed on **localhost:3000**
 
 ## How It Works
 
 Instead of using a proxy server, JSX Tool scripts are directly injected into your Next.js application during development. This approach:
 
-- **Next.js runs on port 3002** - Your development server (no proxy needed!)
+- **Next.js runs on port 3001**
+- **Proxy server runs on port 3000**
 - **WebSocket runs on port 12022** - For file-system communication
 - **Scripts injected via `<head>`** - Manual injection in `layout.tsx`
 
@@ -18,13 +19,22 @@ See `.jsxtool/config.json` for the configuration:
 
 ```json
 {
-  "noProxy": true,              // Disable proxy mode
-  "wsPort": 12022,              // WebSocket port
+  "serverPort": 3001,
+  "serverHost": "localhost",
+  "serverProtocol": "http",
+  "noProxy": false,
+  "proxyPort": 3000,
+  "proxyHost": "localhost",
+  "proxyProtocol": "http",
+  "wsPort": 12021,
   "wsHost": "localhost",
   "wsProtocol": "ws",
-  "logging": false
+  "injectAt": "</head>"
 }
 ```
+
+## rules.md
+A blank rules.md is available at `.jsxtool/rules.md`.  Update these rules to and they will be sent to the LLM with every prompt.
 
 ## Manual Installation Setup
 
@@ -71,44 +81,17 @@ npm install
 ### Start the Development Server with JSX Tool
 
 ```bash
-npm run dev:jsx-tool
+npm run dev
 ```
 
 This command:
 1. Starts the JSX Tool WebSocket server on port 12022
-2. Starts Next.js dev server on port 3002
+2. Starts your application on port 3001
+3. Starts Next.js dev server on port 3000
 
 ### Access Your Application
 
-Simply visit `http://localhost:3002` - no proxy needed!
-
-## Available Scripts
-
-- `npm run dev` - Start Next.js dev server only (port 3002)
-- `npm run jsx-tool` - Start JSX Tool WebSocket server only
-- `npm run dev:jsx-tool` - Start both servers concurrently
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-
-## Why Manual Installation is Better
-
-✅ **No redirect issues** - Your Next.js routing works exactly as expected
-
-✅ **No proxy overhead** - Direct connection to your dev server
-
-✅ **Simpler debugging** - No intermediate proxy layer to troubleshoot
-
-✅ **More control** - You decide exactly when and how JSX Tool is loaded
-
-## Comparison with Proxy Setup
-
-| Feature | Manual Installation | Proxy Setup |
-|---------|-------------------|-------------|
-| Redirect handling | ✅ Works perfectly | ⚠️ Can cause issues |
-| Setup complexity | Slightly more | Simpler initial setup |
-| Performance | ✅ No overhead | Proxy overhead |
-| Port management | Direct access | Requires proxy port |
-| Recommended | ✅ Yes | Only if manual won't work |
+Visit `http://localhost:3000`
 
 ## Project Structure
 
@@ -130,4 +113,3 @@ next-without-proxy/
 
 - [JSX Tool Documentation](https://github.com/jsx-tool/jsx-tool)
 - [Next.js Documentation](https://nextjs.org/docs)
-- [Proxy Installation Example](../next-with-proxy) - Alternative approach
