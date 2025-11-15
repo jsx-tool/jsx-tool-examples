@@ -2,6 +2,25 @@
 
 This example demonstrates how to use JSX Tool with React Router 7 and Vite. JSX Tool integrates seamlessly through a Vite plugin, making setup incredibly simple.
 
+## Getting Started
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start the Development Server
+
+```bash
+npm run dev
+```
+
+That's all! The JSX Tool Vite plugin automatically:
+1. Starts the WebSocket server
+2. Injects the necessary scripts
+3. Handles all communication with your file system
+
 ## How It Works
 
 JSX Tool provides a Vite plugin (`jsxToolDevServer`) that automatically:
@@ -32,25 +51,6 @@ export default defineConfig({
 });
 ```
 
-## Getting Started
-
-### Install Dependencies
-
-```bash
-npm install
-```
-
-### Start the Development Server
-
-```bash
-npm run dev
-```
-
-That's all! The JSX Tool Vite plugin automatically:
-1. Starts the WebSocket server
-2. Injects the necessary scripts
-3. Handles all communication with your file system
-
 ### Access Your Application
 
 Visit `http://localhost:5173` (or whatever port Vite assigns)
@@ -62,15 +62,6 @@ Visit `http://localhost:5173` (or whatever port Vite assigns)
 - `npm run start` - Start production server
 - `npm run typecheck` - Run TypeScript type checking
 
-## Why This is the Easiest Setup
-
-✅ **Zero configuration** - Just add one line to your Vite config
-
-✅ **No manual injection** - Plugin handles everything automatically
-
-✅ **No proxy needed** - Direct integration with Vite's dev server
-
-✅ **Works out of the box** - No ports to configure, no scripts to add
 
 ## Project Structure
 
@@ -103,7 +94,6 @@ While the Vite plugin works out of the box, you can optionally customize behavio
 
 ## Learn More
 
-- [JSX Tool Documentation](https://github.com/jsx-tool/jsx-tool)
+- [JSX Tool Documentation](https://jsx-tool.com/docs)
 - [React Router Documentation](https://reactrouter.com)
 - [Vite Documentation](https://vite.dev)
-- [Next.js Examples](../next-without-proxy) - Alternative framework setup

@@ -3,7 +3,7 @@
   "serverHost": "localhost",
   "serverProtocol": "http",
   "noProxy": false,
-  "proxyPort": 3500,
+  "proxyPort": 4000,
   "proxyHost": "localhost",
   "proxyProtocol": "http",
   "wsPort": 12021,

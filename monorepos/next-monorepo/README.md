@@ -43,7 +43,7 @@ In `packages/app/.jsxtool/config.json`:
 ```json
 {
   "noProxy": true,
-  "wsPort": 12124,
+  "wsPort": 12021,
   "wsHost": "localhost",
   "wsProtocol": "ws",
   "injectAt": "</head>",
@@ -93,20 +93,21 @@ packages/app/          (your .jsxtool/config.json is here)
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack --port 3001",
+    "dev": "next dev --turbopack --port 3000",
     "jsx-tool": "jsx-tool",
     "dev:jsx-tool": "npm run jsx-tool & npm run dev",
     "build": "next build --turbopack",
     "start": "next start"
   },
   "dependencies": {
-    "@jsx-tool/jsx-tool": "^0.0.12",
+    "@jsx-tool/jsx-tool": "^0.0.25",
     "next": "15.5.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "shared": "*"
   }
 }
+
 ```
 
 **Note:** The `jsx-tool` script uses `../../node_modules/` because dependencies are hoisted to the monorepo root.
@@ -148,7 +149,7 @@ export default function RootLayout({
         {process.env.NODE_ENV === 'development' && (
           <script
             dangerouslySetInnerHTML={{
-              __html: `window.__JSX_TOOL_DEV_SERVER_WS_URL__ = 'ws://localhost:12124';`,
+              __html: `window.__JSX_TOOL_DEV_SERVER_WS_URL__ = 'ws://localhost:12021';`,
             }}
           />
         )}
@@ -178,13 +179,13 @@ npm run dev
 ```
 
 This runs `npm run dev:jsx-tool --workspace=app`, which:
-1. Starts the JSX Tool WebSocket server on port 12124
-2. Starts Next.js dev server on port 3001
+1. Starts the JSX Tool WebSocket server on port 12021
+2. Starts Next.js on port 3000
 3. Gives JSX Tool access to both `packages/app/` and `packages/shared/`
 
 ### Access Your Application
 
-Visit `http://localhost:3001`
+Visit `http://localhost:3000`
 
 ## Using Shared Components
 
@@ -242,7 +243,6 @@ All paths are relative to `packages/app/` where the config lives.
 
 ## Learn More
 
-- [JSX Tool Documentation](https://github.com/jsx-tool/jsx-tool)
+- [JSX Tool Documentation](https://jsxtool.com/docs)
 - [Next.js Documentation](https://nextjs.org/docs)
 - [npm Workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces)
-- [Single Package Examples](../next-without-proxy)
